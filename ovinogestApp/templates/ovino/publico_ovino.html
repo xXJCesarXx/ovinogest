@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row">
+    {% for ovino in ovinos %}
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+
+            <div>{{ovino.id_ovino}}</div>
+
+            <div class="row-cols-md-2"><img src="{{ovino.foto_url}}" alt="">
+
+            </div>
+
+            <div class="card-header">{{ovino.matricula}}</div>
+
+            <div>{{ovino.nome_ovino}}</div>
+            <div class="row">
+                <div class="col-md-4">{{ovino.sexo_ovino}}</div>
+                <div class="col-md-4">{{ovino.data_nasc}}</div>
+                <div class="col-md-4">{{ovino.data_cad}}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">{{ovino.peso_ovino}}</div>
+                <div class="col-md-4">{{ovino.id_categoria}}</div>
+                <div class="col-md-4">{{ovino.id_raca}}</div>
+            </div>
+
+            <div class="row" >
+
+                <div class="row">
+                    <a href="#" class="btn btn-warning col-md-2 m-2">#</a>
+
+                    <a href="#" class="btn btn-warning col-md-2 m-2">#</a>
+
+                    <a href="#" class="btn btn-warning col-md-2 m-2">#</a>
+
+                    <a href="#" class="btn btn-warning col-md-2 m-2">#</a>
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+</body>
+</html>
